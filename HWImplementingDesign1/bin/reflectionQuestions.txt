@@ -1,0 +1,28 @@
+Reflection Questions:
+
+1.A In your implementation could you replace each Question class with just a Java String (yes or no)? 
+
+
+
+1.B Explain why or why not? (2-3 sentences)
+
+Yes it is possible to replace objects of questions with a java string. One could use a hashmap (similar to my implementation) to store the question id and  just the string, 
+instead of redundantly assigning ids and strings for each object of type question.
+
+2.A. What data type did you use to represent the 1-to-many relationship between QuizMain and Question? (provide the type declaration)
+
+HashMap <Integer,Question> Questions = new HashMap<>();
+
+2.B. What is another data type could you have used? (provide the type declaration) 
+
+(I think most students would have used Arraylist to implement the question, and given the previous one i think hashmap would be the answer to this one, 
+but i used a Hashmap in the first place, so my answer is)
+
+ArrayList <Question> = new ArrayList<>();
+
+2.C. Would that have made your implementation easier or harder to implement? Explain why? (2-3 sentences)
+
+ArrayLists would have made the code cleaner if we used objects of type Question like the current code. (But accessibility would have been reduced)
+
+However, If we chose to use ArrayLists WITHOUT objects of question, we would have to find the ids using loops for each given question query, which would have made implementing
+this design substantially tougher.
